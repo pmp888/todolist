@@ -68,3 +68,9 @@ var todoList = {
         this.displayTodos();
         }
       };
+
+//Grabbing ID and adding Event Listener to DisplayTodos
+      var displayTodosButton = document.getElementById('displayTodosButton');
+      displayTodosButton.addEventListener('click',function(){
+        todoList.displayTodos();
+      })
