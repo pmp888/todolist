@@ -57,6 +57,7 @@ var todoList = {
         }
       }
         else {
+          // if all or at least one Todo is false , make them all true
           for (var i = 0; i < totalTodos; i++) {
             this.todos[i].completed = true;
 
