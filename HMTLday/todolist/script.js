@@ -3,7 +3,7 @@ var todoList = {
 
       displayTodos: function() {
         if (this.todos.length === 0) {
-          console.log ('Todo List is empty')
+          console.log ('Todo List is empty');
         }
 
         else {
@@ -100,10 +100,26 @@ var handlers = {
   },
   changeTodo: function() {
     var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
-    var changeTodoTextInput = document.getElementbyId('changeTodoTextInput');
-    var changeTodoPositionNumberImput = Number(changetodoPositionInput.value)
-    todoList.changeTodo (changeTodoPositionNumberInput, changeTodoTextInput.value);
+    var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+    var changeTodoPositionNumberInput = Number(changeTodoPositionInput.value)
+    console.log (changeTodoPositionNumberInput)
+    todoList.changeTodo (changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
     changeTodoTextInput.value = '';
     changeTodoPositionInput.value = '';
+  },
+  deleteTodo: function() {
+  var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
+  todoList.deleteTodo (deleteTodoPositionInput.value);
   }
-}
+};
+
+
+// Testing CODE for experimenting! (Tony)
+// var a = "0"
+// console.log('a', a);
+// var b = a.valueAsNumber
+// console.log('b', b);
+// console.log(typeof b);
+// var c = b.valueAsString
+// console.log('c', c);
+// console.log(typeof c);
