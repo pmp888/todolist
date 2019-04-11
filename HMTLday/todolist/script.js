@@ -81,6 +81,10 @@ var todoList = {
 //         todoList.toggleAll();
 //       });
 
+// var a = "1"
+// var b = Number(a)
+// var c = b.toString()
+
 
 var handlers = {
   displayTodos: function() {
@@ -88,5 +92,18 @@ var handlers = {
   },
   toggleAll: function() {
     todoList.toggleAll();
+  },
+  addTodo: function() {
+    var addTodoTextInput = document.getElementById('addTodoTextInput');
+    todoList.addTodo (addTodoTextInput.value);
+    addTodoTextInput.value = '';
+  },
+  changeTodo: function() {
+    var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
+    var changeTodoTextInput = document.getElementbyId('changeTodoTextInput');
+    var changeTodoPositionNumberImput = Number(changetodoPositionInput.value)
+    todoList.changeTodo (changeTodoPositionNumberInput, changeTodoTextInput.value);
+    changeTodoTextInput.value = '';
+    changeTodoPositionInput.value = '';
   }
 }
